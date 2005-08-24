@@ -4,6 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Searcher for Man pages
+Summary(pl):	Wyszukiwarka stron Man
 Name:		Sman
 Version:	0.95
 Release:	0.1
@@ -13,18 +14,14 @@ Group:		Development/Languages/Perl
 Source0:	http://joshr.com/src/sman/%{name}-%{version}.tar.gz
 # Source0-md5:	b786338eba068a4a110bf2bbda51e695
 URL:		http://joshr.com/src/sman/
-BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Cache-Cache
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-FreezeThaw
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	swish-e-perl
-%if %{with tests}
-%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-#%%define		_noautoreq	'perl(anything_fake_or_conditional)'
 
 %description
 Sman is the Searcher for Man pages. Based on the example of the same
@@ -50,6 +47,30 @@ abilities over its predecessors:
 
 - Performs 'stemming' so that a search for "searches" will match a
   document with the word "searching"
+
+%description -l pl
+Sman to wyszukiwarka stron Man. Jest to rozszerzona wersja 'apropos' i
+'man -k' oparta na przyk³adzie o tej samej nazwie z artyku³u Josha
+Rabinowitza "How To Index Anything" ("Jak indeksowaæ cokolwiek") w
+numerze Linux Journal z czerwca 2003
+<http://www.linuxjournal.com/article.php?sid=6652>. Sman dodaje kilka
+kluczowych mo¿liwo¶ci, których nie maj± poprzednicy:
+
+- obs³uguje z³o¿one wyszukiwania tekstu w jêzyku naturalnym, takie jak
+  "(linux and kernel) or (mach and microkernel)"
+
+- pokazuje wyniki w kolejno¶ci punktacji i opcjonalnie wyci±g ze
+  strony (przy u¿yciu -e) z pod¶wietleniem wyszukiwanego tekstu
+
+- pozwala na wyszukiwanie po sekcji, tytule, ciele i nazwie pliku
+  strony (przy u¿yciu 'nazwa-meta=szukane-s³owo')
+
+- indeksuje ca³± zawarto¶æ stron man, a nie tylko tytu³ i opis
+
+- u¿ywa wcze¶niej zbudowanego indeksu w celu szybszego wyszukiwania
+
+- wykonuje "stemming", przez co np. wyszukiwanie s³owa "searches"
+  znajdzie dokument ze s³owem "searching"
 
 %prep
 %setup -q
@@ -82,6 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Sman/Config.pm
 %dir %{perl_vendorlib}/Sman/Man
 %{perl_vendorlib}/Sman/Man/Cache.pm
+%dir %{perl_vendorlib}/Sman/Man/Cache
 %{perl_vendorlib}/Sman/Man/Cache/DB_File.pm
 %{perl_vendorlib}/Sman/Man/Cache/FileCache.pm
 %{perl_vendorlib}/Sman/Man/Convert.pm

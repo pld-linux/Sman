@@ -23,6 +23,8 @@ BuildRequires:	swish-e-perl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautoreq	'perl(Sman::IndexVersion)'
+
 %description
 Sman is the Searcher for Man pages. Based on the example of the same
 name in Josh Rabinowitz's article "How To Index Anything" in the July,

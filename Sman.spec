@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Searcher for Man pages
-Summary(pl):	Wyszukiwarka stron Man
+Summary(pl.UTF-8):   Wyszukiwarka stron Man
 Name:		Sman
 Version:	0.95
 Release:	0.1
@@ -48,29 +48,29 @@ abilities over its predecessors:
 - Performs 'stemming' so that a search for "searches" will match a
   document with the word "searching"
 
-%description -l pl
+%description -l pl.UTF-8
 Sman to wyszukiwarka stron Man. Jest to rozszerzona wersja 'apropos' i
-'man -k' oparta na przyk≥adzie o tej samej nazwie z artyku≥u Josha
-Rabinowitza "How To Index Anything" ("Jak indeksowaÊ cokolwiek") w
+'man -k' oparta na przyk≈Çadzie o tej samej nazwie z artyku≈Çu Josha
+Rabinowitza "How To Index Anything" ("Jak indeksowaƒá cokolwiek") w
 numerze Linux Journal z czerwca 2003
 <http://www.linuxjournal.com/article.php?sid=6652>. Sman dodaje kilka
-kluczowych moøliwo∂ci, ktÛrych nie maj± poprzednicy:
+kluczowych mo≈ºliwo≈õci, kt√≥rych nie majƒÖ poprzednicy:
 
-- obs≥uguje z≥oøone wyszukiwania tekstu w jÍzyku naturalnym, takie jak
+- obs≈Çuguje z≈Ço≈ºone wyszukiwania tekstu w jƒôzyku naturalnym, takie jak
   "(linux and kernel) or (mach and microkernel)"
 
-- pokazuje wyniki w kolejno∂ci punktacji i opcjonalnie wyci±g ze
-  strony (przy uøyciu -e) z pod∂wietleniem wyszukiwanego tekstu
+- pokazuje wyniki w kolejno≈õci punktacji i opcjonalnie wyciƒÖg ze
+  strony (przy u≈ºyciu -e) z pod≈õwietleniem wyszukiwanego tekstu
 
 - pozwala na wyszukiwanie po sekcji, tytule, ciele i nazwie pliku
-  strony (przy uøyciu 'nazwa-meta=szukane-s≥owo')
+  strony (przy u≈ºyciu 'nazwa-meta=szukane-s≈Çowo')
 
-- indeksuje ca≥± zawarto∂Ê stron man, a nie tylko tytu≥ i opis
+- indeksuje ca≈ÇƒÖ zawarto≈õƒá stron man, a nie tylko tytu≈Ç i opis
 
-- uøywa wcze∂niej zbudowanego indeksu w celu szybszego wyszukiwania
+- u≈ºywa wcze≈õniej zbudowanego indeksu w celu szybszego wyszukiwania
 
-- wykonuje "stemming", przez co np. wyszukiwanie s≥owa "searches"
-  znajdzie dokument ze s≥owem "searching"
+- wykonuje "stemming", przez co np. wyszukiwanie s≈Çowa "searches"
+  znajdzie dokument ze s≈Çowem "searching"
 
 %prep
 %setup -q

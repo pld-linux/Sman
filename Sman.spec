@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	Searcher for Man pages
-Summary(pl.UTF-8):   Wyszukiwarka stron Man
+Summary(pl.UTF-8):	Wyszukiwarka stron Man
 Name:		Sman
 Version:	0.95
 Release:	0.1

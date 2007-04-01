@@ -6,13 +6,13 @@
 Summary:	Searcher for Man pages
 Summary(pl.UTF-8):	Wyszukiwarka stron Man
 Name:		Sman
-Version:	0.95
+Version:	1.01
 Release:	0.1
 # "same as perl"
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://joshr.com/src/sman/%{name}-%{version}.tar.gz
-# Source0-md5:	b786338eba068a4a110bf2bbda51e695
+# Source0-md5:	092fb9860602b40f582b74a251530b5d
 URL:		http://joshr.com/src/sman/
 BuildRequires:	perl-Cache-Cache
 BuildRequires:	perl-Compress-Zlib
@@ -110,6 +110,8 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Sman/Man/Find.pm
 %{perl_vendorlib}/Sman/Swishe.pm
 %{perl_vendorlib}/Sman/Util.pm
-%{perl_vendorlib}/sman.conf.pm
+%{perl_vendorarch}/auto/Sman/.packlist
+%{perl_vendorlib}/Sman/IndexVersion.pm
+%{perl_vendorlib}/Sman/sman.conf.pm
 %{_mandir}/man1/*
 %{_mandir}/man3/*

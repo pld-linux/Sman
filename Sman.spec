@@ -110,7 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/Sman/Man/Find.pm
 %{perl_vendorlib}/Sman/Swishe.pm
 %{perl_vendorlib}/Sman/Util.pm
-%{perl_vendorarch}/auto/Sman/.packlist
 %{perl_vendorlib}/Sman/IndexVersion.pm
 %{perl_vendorlib}/Sman/sman.conf.pm
 %{_mandir}/man1/*

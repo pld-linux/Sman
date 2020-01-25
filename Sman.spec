@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 Summary:	Searcher for Man pages
 Summary(pl.UTF-8):	Wyszukiwarka stron Man
 Name:		Sman
